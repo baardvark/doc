@@ -1,12 +1,9 @@
 <%= button_to "Log Out", destroy_login_session_path, method: :delete %>
 <h2>Welcome <%= current_login.first_name %></h2>
 <hr />
-<%= link_to "Add Account", new_account_path %>
-<h3>Your Account</h3>
-<ul>
-  <% @accounts.each do |account| %>
-    <li>
-      <%= a.name %> - $<%= a.balance %>
-    </li>
-  <% end %>
-</ul>
+<h3>Let's Get Started!</h3>
+<hr />
+<%= link_to 'Patients', users_path, class:"item" %>
+<hr />
+<%= link_to 'Doctors', doctors_path, class:"item" %>
+
