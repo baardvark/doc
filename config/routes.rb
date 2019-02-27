@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :logins
   get 'appointments/index'
   get 'appointments/new'
   get 'appointment/index'
   get 'appointment/new'
-  root 'doctors#index'
+  get 'doctors/index'
+  root "accounts#index"
+  
+
+  resources :accounts
 
   resources :users
   resources :doctors do
